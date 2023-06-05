@@ -40,4 +40,9 @@ export const GlobalStyles = createGlobalStyle`
   body.lock-scroll main {
     visibility: hidden;
   }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
 `;

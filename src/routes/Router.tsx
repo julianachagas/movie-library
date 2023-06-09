@@ -1,22 +1,19 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import App from '../App';
-import { MoviesList } from '../components/MoviesList';
-import { Movie } from '../components/Movie';
-import { TvSeries } from '../components/TvSeries';
-import { Search } from '../components/Search';
-import { TvList } from '../components/TvList';
+import { SearchPage } from '../pages/SearchPage';
 import { ShowError } from '../components/Error';
+import { ItemPage } from '../pages/ItemPage';
+import { ListPage } from '../pages/ListPage';
 
 export const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/" element={<Navigate to="/movies/popular" />} />
-        <Route path="movies/:name" element={<MoviesList />} />
-        <Route path="movie/:id" element={<Movie />} />
-        <Route path="tvseries/:name" element={<TvList />} />
-        <Route path="tv/:id" element={<TvSeries />} />
-        <Route path="search/:query" element={<Search />} />
+        <Route path="movies/:name" element={<ListPage />} />
+        <Route path="tvseries/:name" element={<ListPage />} />
+        <Route path="title/:id" element={<ItemPage />} />{' '}
+        <Route path="search/:query" element={<SearchPage />} />
         <Route path="*" element={<ShowError />} />
       </Route>
     </Routes>

@@ -10,8 +10,8 @@ export const Router = () => {
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="/" element={<Navigate to="/movies/popular" />} />
-        <Route path="movies/:name" element={<ListPage />} />
-        <Route path="tvseries/:name" element={<ListPage />} />
+        <Route path="movies/:category" element={<ListPage />} />
+        <Route path="tvshows/:category" element={<ListPage />} />
         <Route path="title/:id" element={<ItemPage />} />{' '}
         <Route path="search/:query" element={<SearchPage />} />
         <Route path="*" element={<ShowError />} />

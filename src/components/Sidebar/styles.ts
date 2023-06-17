@@ -59,6 +59,12 @@ export const SidebarContainer = styled.article`
           color: ${props => props.theme.colors.accent};
         }
       }
+      &:not(.active):hover {
+        color: ${props => props.theme.colors.white};
+        svg {
+          color: currentColor;
+        }
+      }
       svg {
         font-size: 2.2rem;
       }
@@ -78,7 +84,7 @@ export const SidebarContainer = styled.article`
     line-height: 1.5;
     p {
       font-size: 1.4rem;
-      color: ${props => props.theme.colors.gray};
+      color: ${props => props.theme.colors.white_70};
     }
 
     img {

@@ -9,6 +9,9 @@ export const HeaderContainer = styled.header`
   position: absolute;
   width: 100%;
   z-index: 1;
+  &.fixed {
+    position: fixed;
+  }
 
   button {
     border: none;

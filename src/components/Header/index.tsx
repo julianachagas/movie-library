@@ -1,4 +1,4 @@
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { BiCameraMovie } from 'react-icons/bi';
 import { FaSearch } from 'react-icons/fa';
 import { FormContainer, HeaderContainer } from './styles';
@@ -43,7 +43,7 @@ export const Header = () => {
   }, [mobileForm]);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer className={mobileMenu ? 'fixed' : ''}>
       <button
         className={`toggle-menu${mobileMenu ? ' active' : ''} `}
         onClick={toggleMobileMenu}
@@ -57,10 +57,10 @@ export const Header = () => {
         </div>
       </button>
       <div className="logo">
-        <NavLink to="/movies/popular">
+        <Link to="/movies/popular">
           <BiCameraMovie />
           <span>MovieLibrary</span>
-        </NavLink>
+        </Link>
       </div>
       <FormContainer
         role="dialog"

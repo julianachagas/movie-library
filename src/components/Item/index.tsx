@@ -5,6 +5,7 @@ import { ArrowLeft, Link, Calendar, Clock } from 'phosphor-react';
 import { ItemData } from '../../helpers/normalizeData';
 import { Poster } from '../Poster';
 import { StyledButton } from '../../styles/global';
+import { format, isAfter, parseISO } from 'date-fns';
 
 export function Item(props: ItemData) {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export function Item(props: ItemData) {
           </div>
           <h1>{props.title}</h1>
           {props.releaseDate && (
-            <p>{new Date(props.releaseDate).getFullYear().toString()}</p>
+            <p>{parseISO(props.releaseDate).getFullYear()}</p>
           )}
           <p className="genres">
             {props.genres.map(genre => (
@@ -56,7 +57,13 @@ export function Item(props: ItemData) {
             <p className="stats">
               <ChartLineUp />
               <span>Status:</span>
-              <span>{props.status}</span>
+              <span>
+                {props.status === 'Released' &&
+                props.releaseDate &&
+                isAfter(parseISO(props.releaseDate), new Date())
+                  ? 'To be Released'
+                  : props.status}
+              </span>
             </p>
           )}
           <p className="stats">
@@ -64,7 +71,7 @@ export function Item(props: ItemData) {
             <span>Release Date: </span>
             <span>
               {props.releaseDate
-                ? new Date(props.releaseDate).toLocaleDateString()
+                ? format(parseISO(props.releaseDate), 'dd/MM/yyyy')
                 : '-'}
             </span>
           </p>

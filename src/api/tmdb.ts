@@ -20,6 +20,11 @@ export const getListURL = (
   category: MovieCategories | TVCategories,
   page = '1',
 ) => {
+  const date = new Date().toISOString().split('T')[0];
+  if (category === 'upcoming' || category === 'on_the_air') {
+    return `${config.api_base_url}discover/${mediaType}?language=en-US&page=${page}&sort_by=popularity.desc&primary_release_date.gte=${date}`;
+  }
+
   return `${config.api_base_url}${mediaType}/${category}?language=en-US&page=${page}`;
 };
 

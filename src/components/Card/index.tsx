@@ -1,6 +1,7 @@
 import { Star } from 'phosphor-react';
 import { CardContainer } from './styles';
 import { Poster } from '../Poster';
+import { parseISO } from 'date-fns';
 
 export interface CardProps {
   id: number;
@@ -17,7 +18,7 @@ export const Card = (props: CardProps) => {
       <div className="content">
         <p className="title">{props.title}</p>
         {props.releaseDate && (
-          <p>{new Date(props.releaseDate).getFullYear().toString()}</p>
+          <p>{parseISO(props.releaseDate).getFullYear()}</p>
         )}
         {!props.releaseDate && <p>-</p>}
         <div>

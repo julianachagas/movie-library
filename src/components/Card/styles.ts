@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   border-radius: 7px;
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   .content {
     text-align: center;
     padding: 1.5rem 1rem;

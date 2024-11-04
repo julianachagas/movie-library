@@ -89,7 +89,7 @@ export const Sidebar = () => {
             Juliana Chagas
           </a>
         </p>
-        <p>2023</p>
+        <p>2024</p>
       </footer>
     </SidebarContainer>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.section`
   margin-bottom: 5rem;
   h1 {
     margin-block: 1rem;

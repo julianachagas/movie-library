@@ -13,7 +13,7 @@ export const BackToTopButton = () => {
 
   React.useEffect(() => {
     function handleScroll() {
-      setBackToTopBtn(() => (window.scrollY > 500 ? true : false));
+      setBackToTopBtn(() => window.scrollY > 500);
     }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

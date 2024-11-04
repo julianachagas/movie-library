@@ -9,7 +9,6 @@ export const SidebarContainer = styled.article`
   min-height: 100vh;
   height: 100%;
   border-right: 1px solid ${props => props.theme.colors.separator};
-  width: 250px;
   background-color: ${props => props.theme.colors.primary};
   transition: transform 0.3s ease, visibility 0.3s ease;
   display: flex;

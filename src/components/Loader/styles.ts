@@ -8,7 +8,7 @@ export const LoaderContainer = styled.div`
     font-size: 1.8rem;
   }
   svg {
-    animation: spin 2s infinite;
+    animation: spin 2.5s infinite;
   }
 
   @keyframes spin {

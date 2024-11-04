@@ -38,7 +38,7 @@ export const ImageContainer = styled.div`
     );
     background-color: #1a1a1a;
     background-size: 200%;
-    animation: skeleton 1.8s infinite linear;
+    animation: skeleton 1s infinite linear;
   }
 
   @keyframes skeleton {

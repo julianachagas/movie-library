@@ -15,7 +15,7 @@ A Movie and TV Shows Library built with ReactJS and TypeScript using The Movie D
 
 ## 🔗 Link
 
-- [MovieLive Website](https://movie-library-julianachagas.netlify.app/)
+- [Movie Library: Live Website](https://movie-library-julianachagas.netlify.app/)
 
 ## Preview
 
